@@ -10,9 +10,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="春日散策">
     
-    <!-- 預留 App 桌面圖示：請將您的合照命名為 icon.png 並與此檔案放在同個資料夾 -->
-    <link rel="apple-touch-icon" href="icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="icon.png">
+    <!-- 預留 App 桌面圖示：使用 ?v=1 強制刷新 iOS Safari 快取，確保合照能順利顯示 -->
+    <link rel="apple-touch-icon" href="icon.png?v=1">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon.png?v=1">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -172,8 +172,8 @@
                 </div>
             </div>
 
-            <!-- Day Selector (Horizontal Scroll) -->
-            <div class="sticky top-[53px] z-30 bg-muji-bg/95 py-2 -mx-4 px-4 border-b border-muji-border/40 overflow-x-auto flex space-x-2 no-scrollbar">
+            <!-- Day Selector (Horizontal Scroll with Centering ID) -->
+            <div id="day-selector-bar" class="sticky top-[53px] z-30 bg-muji-bg/95 py-2 -mx-4 px-4 border-b border-muji-border/40 overflow-x-auto flex space-x-2 no-scrollbar">
                 <button onclick="scrollToDay(1)" class="day-btn shrink-0 px-4 py-2 rounded-full text-xs font-medium border border-muji-border bg-muji-card text-muji-dark transition-all duration-300 active:scale-95" id="btn-day-1">D1 03/28</button>
                 <button onclick="scrollToDay(2)" class="day-btn shrink-0 px-4 py-2 rounded-full text-xs font-medium border border-muji-border bg-muji-card text-muji-dark transition-all duration-300 active:scale-95" id="btn-day-2">D2 03/29</button>
                 <button onclick="scrollToDay(3)" class="day-btn shrink-0 px-4 py-2 rounded-full text-xs font-medium border border-muji-border bg-muji-card text-muji-dark transition-all duration-300 active:scale-95" id="btn-day-3">D3 03/30</button>
@@ -194,7 +194,7 @@
         <section id="page-guide" class="hidden space-y-6 pb-6">
             <div class="text-center space-y-1">
                 <h2 class="text-lg font-bold text-muji-dark font-jp tracking-wider">🌿 慢活沖繩 ｜ 手帳散策記</h2>
-                <p class="text-xs text-muji-secondary font-medium">溫暖、緩慢、指尖上的島嶼溫度</p>
+                <p class="text-xs text-muji-secondary font-medium">溫慢、柔緩、指尖上的島嶼溫度</p>
             </div>
 
             <!-- Category Section 1: Self Driving Secrets (含地圖) -->
@@ -333,18 +333,18 @@
                         </p>
                         
                         <!-- Transit Route -->
-                        <div class="bg-muji-light/50 rounded-xl p-3 text-[11px] space-y-1.5 border border-muji-border/40">
+                        <div class="bg-muji-light/50 rounded-xl p-3 text-[11px] space-y-1.5 border border-muji-border/40 font-jp">
                             <div class="font-bold text-muji-dark flex items-center">
                                 <i class="fa-solid fa-train-subway text-muji-accent mr-1.5"></i> 單軌輕軌乘車方案：
                             </div>
-                            <p class="text-muji-dark font-medium font-jp">
+                            <p class="text-muji-dark font-medium">
                                 出發：<span class="underline font-bold">牧志站 [OM 09]</span> ➔ 抵達：<span class="underline font-bold">縣廳前站 [OM 06]</span>
                             </p>
                             <p class="text-muji-secondary font-medium font-mono">
                                 ⏱️ 電車車程：約 <span class="font-bold text-muji-dark font-mono">4</span> 分鐘
                             </p>
                             <p class="text-muji-secondary leading-relaxed border-t border-muji-border/30 pt-1.5 mt-1">
-                                💡 <span class="font-bold text-muji-dark font-jp">貼心孝親建議：</span>從「縣廳前站」出站後，距離景點步行約需15分鐘（多為起伏小坡）。極力推薦**直接在站外攔計程車直達波上宮**（車程僅約 5 分鐘，車資約 ¥700），讓媽媽最省力優雅！
+                                💡 <span class="font-bold text-muji-dark">貼心孝親建議：</span>從「縣廳前站」出站後，距離景點步行約需15分鐘（多為起伏小坡）。極力推薦**直接在站外攔計程車直達波上宮**（車程僅約 5 分鐘，車資約 ¥700），讓媽媽最省力優雅！
                             </p>
                         </div>
                     </div>
@@ -364,15 +364,15 @@
                         
                         <!-- Transit Route -->
                         <div class="bg-muji-light/50 rounded-xl p-3 text-[11px] text-muji-secondary space-y-1">
-                            <p class="font-bold text-muji-dark flex items-center font-jp"><i class="fa-solid fa-train mr-1.5 text-muji-accent"></i> 單軌輕軌乘車方案（由飯店出發）：</p>
-                            <p class="text-muji-dark font-medium font-jp">
+                            <p class="font-bold text-muji-dark flex items-center"><i class="fa-solid fa-train mr-1.5 text-muji-accent"></i> 單軌輕軌乘車方案（由飯店出發）：</p>
+                            <p class="text-muji-dark font-medium">
                                 出發：<span class="underline font-bold">牧志站 [OM 09]</span> ➔ 抵達：<span class="underline font-bold">安里站 [OM 10]</span>
                             </p>
                             <p class="text-muji-secondary font-medium font-mono">
                                 ⏱️ 電車車程：約 <span class="font-bold text-muji-dark font-mono">2</span> 分鐘
                             </p>
                             <p class="text-muji-secondary leading-relaxed border-t border-muji-border/30 pt-1.5 mt-1 font-jp">
-                                💡 <span class="font-bold text-muji-dark font-jp">貼心路線提示：</span>若從安里站 [OM 10] 出站，向南步行約 5 分鐘即可直接抵達老街北端入口，沿途皆為平緩水泥路，比從國際通一路逛來更輕鬆省腳力。
+                                💡 <span class="font-bold text-muji-dark">貼心路線提示：</span>若從安里站 [OM 10] 出站，向南步行約 5 分鐘即可直接抵達老街北端入口，沿途皆為平緩水泥路，比從國際通一路逛來更輕鬆省腳力。
                             </p>
                         </div>
                     </div>
@@ -415,16 +415,16 @@
                         </p>
                         
                         <!-- Transit Route -->
-                        <div class="bg-muji-light/50 rounded-xl p-3 text-[11px] text-muji-secondary space-y-1 font-jp">
+                        <div class="bg-muji-light/50 rounded-xl p-3 text-[11px] text-muji-secondary space-y-1">
                             <p class="font-bold text-muji-dark flex items-center font-jp"><i class="fa-solid fa-train mr-1.5 text-muji-accent"></i> 單軌電車乘車方案（飯店出發）：</p>
-                            <p class="text-muji-dark font-medium font-jp">
+                            <p class="text-muji-dark font-medium">
                                 出發：<span class="underline font-bold">牧志站 [OM 09]</span> ➔ 抵達：<span class="underline font-bold">美榮橋站 [OM 08]</span>
                             </p>
                             <p class="text-muji-secondary font-medium font-mono">
                                 ⏱️ 電車車程：約 <span class="font-bold text-muji-dark font-mono">2</span> 分鐘
                             </p>
                             <p class="text-muji-secondary leading-relaxed border-t border-muji-border/30 pt-1.5 mt-1 font-jp">
-                                💡 <span class="font-bold text-muji-dark font-jp">貼心步行路線：</span>美榮橋站出站後，沿著沖繩本地平緩的「沖繩和平通」或是「市場中央通」有蓋頂棚拱廊漫步，只需步行約 6 分鐘即可乾爽抵達市場大樓，防曬又防雨。
+                                💡 <span class="font-bold text-muji-dark">貼心步行路線：</span>美榮橋站出站後，沿著沖繩本地平緩的「沖繩和平通」或是「市場中央通」有蓋頂棚拱廊漫步，只需步行約 6 分鐘即可乾爽抵達市場大樓，防曬又防雨。
                             </p>
                         </div>
                     </div>
@@ -444,7 +444,7 @@
                         
                         <!-- Transit Route -->
                         <div class="bg-muji-light/50 rounded-xl p-3 text-[11px] text-muji-secondary space-y-1 font-jp">
-                            <p class="font-bold text-muji-dark flex items-center"><i class="fa-solid fa-train mr-1.5 text-muji-accent"></i> 單軌電車乘車方案（由那霸市區其他位置）：</p>
+                            <p class="font-bold text-muji-dark flex items-center font-jp"><i class="fa-solid fa-train mr-1.5 text-muji-accent"></i> 單軌電車乘車方案（由那霸市區其他位置）：</p>
                             <p class="text-muji-dark font-medium">
                                 出發：<span class="underline font-bold">縣廳前站 [OM 06]</span> ➔ 抵達：<span class="underline font-bold">美榮橋站 [OM 08]</span>
                             </p>
@@ -473,7 +473,7 @@
                         <!-- Transit Route -->
                         <div class="bg-muji-light/50 rounded-xl p-3 text-[11px] text-muji-secondary space-y-1 font-jp">
                             <p class="font-bold text-muji-dark flex items-center"><i class="fa-solid fa-train mr-1.5 text-muji-accent"></i> 往返機場首尾電車指引：</p>
-                            <p class="text-muji-dark font-medium font-jp">
+                            <p class="text-muji-dark font-medium">
                                 出發：<span class="underline font-bold">那霸空港站 [OM 01]</span> ➔ 抵達：<span class="underline font-bold">牧志站 [OM 09]</span>
                             </p>
                             <p class="text-muji-secondary font-medium font-mono">
@@ -494,7 +494,7 @@
             <div class="bg-muji-card rounded-2xl p-4 border border-muji-border shadow-sm space-y-4">
                 <div class="flex justify-between items-center border-b border-muji-light pb-2 font-jp">
                     <span class="text-xs font-bold text-muji-dark tracking-wider flex items-center">
-                        <i class="fa-solid fa-calculator mr-1.5 text-muji-accent"></i> 雙幣速算計算機
+                        <i class="fa-solid fa-calculator mr-1.5 text-muji-accent"></i> 雙幣轉換計算機
                     </span>
                     <div class="flex items-center space-x-1">
                         <span class="text-[10px] text-muji-secondary font-mono">匯率：1 JPY =</span>
@@ -539,16 +539,147 @@
                 </div>
             </div>
 
+            <!-- 旅行前花費區塊 (Pre-trip expenses) -->
+            <div class="bg-muji-card rounded-2xl p-4 border border-muji-border shadow-sm space-y-3">
+                <div class="flex justify-between items-center border-b border-muji-light pb-2 font-jp">
+                    <span class="text-xs font-bold text-muji-dark tracking-wider flex items-center">
+                        <i class="fa-solid fa-plane-departure mr-1.5 text-muji-accent"></i> 旅行前花費 (台幣 TWD)
+                    </span>
+                    <span class="text-[10px] text-muji-secondary">獨立統計</span>
+                </div>
+                
+                <form id="pretrip-form" onsubmit="addPretripItem(event)" class="space-y-3 text-xs">
+                    <input type="hidden" id="pretrip-edit-id" value="">
+                    
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="space-y-1">
+                            <label class="text-[10px] text-muji-secondary block font-jp">花費項目 *</label>
+                            <select id="pretrip-category" required class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2 text-muji-dark font-medium focus:outline-none focus:border-muji-primary">
+                                <option value="機票">機票</option>
+                                <option value="住宿">住宿</option>
+                                <option value="網路eSIM">網路eSIM</option>
+                                <option value="租車">租車</option>
+                                <option value="其他票券">其他票券</option>
+                            </select>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[10px] text-muji-secondary block font-jp">購買品項 / 詳細 *</label>
+                            <input type="text" id="pretrip-item-name" required placeholder="如：星宇航空雙人來回" class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2 text-muji-dark focus:outline-none focus:border-muji-primary">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="space-y-1">
+                            <label class="text-[10px] text-muji-secondary block font-jp">台幣金額 (TWD) *</label>
+                            <input type="number" id="pretrip-amount" required placeholder="如：24500" class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2 text-muji-dark font-mono focus:outline-none focus:border-muji-primary">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[10px] text-muji-secondary block font-jp">數量 / 人數 *</label>
+                            <input type="number" id="pretrip-pax" required value="2" min="1" class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2 text-muji-dark font-mono focus:outline-none focus:border-muji-primary">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="space-y-1">
+                            <label class="text-[10px] text-muji-secondary block font-jp">購買處 / 平台 *</label>
+                            <input type="text" id="pretrip-vendor" required placeholder="如：星宇航空官網" class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2 text-muji-dark focus:outline-none focus:border-muji-primary">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-[10px] text-muji-secondary block font-jp">支付方式 *</label>
+                            <select id="pretrip-method" required class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2 text-muji-dark font-medium focus:outline-none focus:border-muji-primary">
+                                <option value="刷卡">刷卡</option>
+                                <option value="現金">現金</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-2 pt-1">
+                        <button type="submit" id="pretrip-btn-submit" class="flex-grow bg-muji-primary hover:bg-muji-primary/90 text-white text-xs font-bold py-2 rounded-lg active:scale-95 transition-all shadow-sm">
+                            新增這筆行前花費
+                        </button>
+                        <button type="button" id="pretrip-btn-cancel" onclick="cancelPretripEdit()" class="bg-muji-light text-muji-dark text-xs font-bold py-2 px-3 rounded-lg hidden">
+                            取消
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Pretrip List Container with zero overlapping -->
+                <div class="border-t border-muji-light pt-3 space-y-2.5">
+                    <div class="flex justify-between items-center text-[11px] font-jp font-bold">
+                        <span class="text-muji-dark">行前花費明細</span>
+                        <button onclick="clearPretrip()" class="text-[10px] text-red-500 hover:underline"><i class="fa-solid fa-trash-can mr-1"></i>重設明細</button>
+                    </div>
+                    <div id="pretrip-list-container" class="space-y-2.5 max-h-56 overflow-y-auto pr-1">
+                        <!-- Dynamic Pre-trip Items (rendered with strict robust sizing natively) -->
+                    </div>
+                    <div class="bg-muji-warmlight border border-muji-warm/30 rounded-xl p-3 flex justify-between items-center text-xs font-bold">
+                        <span class="text-muji-dark font-jp">行前累計花費：</span>
+                        <span id="pretrip-total" class="text-sm text-muji-accent font-mono font-bold">NT$ 0</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Ledger Record Tool -->
             <div class="bg-muji-card rounded-2xl p-4 border border-muji-border shadow-sm space-y-4">
                 <h3 class="text-xs font-bold text-muji-dark tracking-wider flex items-center border-b border-muji-light pb-2 font-jp">
-                    <i class="fa-solid fa-file-invoice-dollar mr-1.5 text-muji-accent"></i> 新增消費記帳
+                    <i class="fa-solid fa-file-invoice-dollar mr-1.5 text-muji-accent"></i> 新增一筆消費
                 </h3>
                 <form id="ledger-form" onsubmit="addLedgerItem(event)" class="space-y-3">
                     <div class="grid grid-cols-2 gap-3">
+                        <!-- Custom Select Dropdown for Expense Categories -->
+                        <div class="space-y-1 relative">
+                            <label class="text-[10px] text-muji-secondary block font-jp font-medium">消費類別 *</label>
+                            
+                            <button type="button" id="category-dropdown-btn" onclick="toggleCategoryDropdown()" class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2.5 text-muji-dark focus:outline-none focus:border-muji-primary font-medium flex items-center justify-between">
+                                <span id="selected-category-display" class="flex items-center">
+                                    <i id="selected-category-icon" class="fa-solid fa-train-subway text-muji-accent mr-2"></i>
+                                    <span id="selected-category-text">交通票卷</span>
+                                </span>
+                                <i class="fa-solid fa-chevron-down text-muji-secondary text-[10px]"></i>
+                            </button>
+                            
+                            <!-- Hidden input to store selected value for forms compatibility -->
+                            <input type="hidden" id="ledger-category" name="category" value="交通票卷">
+                            
+                            <!-- Dropdown options rendered with correct styled vector FontAwesome icons -->
+                            <div id="category-dropdown-menu" class="hidden absolute left-0 right-0 mt-1 bg-white border border-muji-border rounded-lg shadow-lg z-50 max-h-48 overflow-y-auto no-scrollbar">
+                                <div onclick="selectCategory('交通票卷', 'fa-solid fa-train-subway')" class="cursor-pointer px-3 py-2 text-xs text-muji-dark hover:bg-muji-light flex items-center">
+                                    <i class="fa-solid fa-train-subway text-muji-accent mr-2.5 w-4 text-center"></i>交通票卷
+                                </div>
+                                <div onclick="selectCategory('藥品彩妝', 'fa-solid fa-wand-magic-sparkles')" class="cursor-pointer px-3 py-2 text-xs text-muji-dark hover:bg-muji-light flex items-center">
+                                    <i class="fa-solid fa-wand-magic-sparkles text-muji-accent mr-2.5 w-4 text-center"></i>藥品彩妝
+                                </div>
+                                <div onclick="selectCategory('飾品服裝', 'fa-solid fa-shirt')" class="cursor-pointer px-3 py-2 text-xs text-muji-dark hover:bg-muji-light flex items-center">
+                                    <i class="fa-solid fa-shirt text-muji-accent mr-2.5 w-4 text-center"></i>飾品服裝
+                                </div>
+                                <div onclick="selectCategory('療癒小物', 'fa-solid fa-face-smile')" class="cursor-pointer px-3 py-2 text-xs text-muji-dark hover:bg-muji-light flex items-center">
+                                    <i class="fa-solid fa-face-smile text-muji-accent mr-2.5 w-4 text-center"></i>療癒小物
+                                </div>
+                                <div onclick="selectCategory('餐飲甜點', 'fa-solid fa-mug-saucer')" class="cursor-pointer px-3 py-2 text-xs text-muji-dark hover:bg-muji-light flex items-center">
+                                    <i class="fa-solid fa-mug-saucer text-muji-accent mr-2.5 w-4 text-center"></i>餐飲甜點
+                                </div>
+                                <div onclick="selectCategory('超市購物', 'fa-solid fa-basket-shopping')" class="cursor-pointer px-3 py-2 text-xs text-muji-dark hover:bg-muji-light flex items-center">
+                                    <i class="fa-solid fa-basket-shopping text-muji-accent mr-2.5 w-4 text-center"></i>超市購物
+                                </div>
+                                <div onclick="selectCategory('生活用品', 'fa-solid fa-pump-soap')" class="cursor-pointer px-3 py-2 text-xs text-muji-dark hover:bg-muji-light flex items-center">
+                                    <i class="fa-solid fa-pump-soap text-muji-accent mr-2.5 w-4 text-center"></i>生活用品
+                                </div>
+                                <div onclick="selectCategory('其它購物', 'fa-solid fa-bag-shopping')" class="cursor-pointer px-3 py-2 text-xs text-muji-dark hover:bg-muji-light flex items-center">
+                                    <i class="fa-solid fa-bag-shopping text-muji-accent mr-2.5 w-4 text-center"></i>其它購物
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="space-y-1">
-                            <label class="text-[10px] text-muji-secondary block font-jp font-medium">消費項目 *</label>
-                            <input type="text" id="ledger-name" required placeholder="如：藥妝、草莓" class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2.5 text-muji-dark focus:outline-none focus:border-muji-primary">
+                            <label class="text-[10px] text-muji-secondary block font-jp font-medium">消費地點 / 事件 *</label>
+                            <input type="text" id="ledger-name" required placeholder="如：MaxValu 牧志店" class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2.5 text-muji-dark focus:outline-none focus:border-muji-primary">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="space-y-1">
+                            <label class="text-[10px] text-muji-secondary block font-jp font-medium">品項 / 明細說明 *</label>
+                            <input type="text" id="ledger-details" required placeholder="如：大草莓, 鮮乳, 壽司" class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2.5 text-muji-dark focus:outline-none focus:border-muji-primary">
                         </div>
                         <div class="space-y-1">
                             <label class="text-[10px] text-muji-secondary block font-mono font-medium">日幣金額 (JPY) *</label>
@@ -556,7 +687,15 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-1 gap-3">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="space-y-1">
+                            <label class="text-[10px] text-muji-secondary block font-jp font-medium">支付方式 *</label>
+                            <select id="ledger-method" required class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2.5 text-muji-dark focus:outline-none focus:border-muji-primary font-medium">
+                                <option value="刷卡">刷卡</option>
+                                <option value="現金">現金</option>
+                                <option value="行動支付">行動支付</option>
+                            </select>
+                        </div>
                         <div class="space-y-1">
                             <label class="text-[10px] text-muji-secondary block font-jp font-medium">購買日期 *</label>
                             <select id="ledger-date" required class="w-full bg-muji-light border border-muji-border rounded-lg text-xs p-2.5 text-muji-dark focus:outline-none focus:border-muji-primary font-medium">
@@ -567,7 +706,7 @@
                                 <option value="2026-04-01">04/01 (四) Day 5 - 海景與家常</option>
                                 <option value="2026-04-02">04/02 (五) Day 6 - 崖上的神社</option>
                                 <option value="2026-04-03">04/03 (六) Day 7 - 市井煙火氣</option>
-                                <option value="2026-04-04">04/04 (日) Day 8 - 打包琉球藍</option>
+                                <option value="2026-04-04">04/04 (日) Day 8 - 封裝琉球藍</option>
                             </select>
                         </div>
                     </div>
@@ -591,7 +730,7 @@
                     </div>
 
                     <button type="submit" class="w-full bg-muji-primary text-white text-xs font-bold py-2.5 rounded-lg active:scale-[0.98] transition-all shadow-sm font-jp">
-                        儲存購物足跡
+                        儲存這筆購物足跡
                     </button>
                 </form>
             </div>
@@ -633,21 +772,35 @@
                 </div>
 
                 <!-- Interactive list -->
-                <div id="checklist-container" class="space-y-2.5 text-xs">
-                    <!-- Checklist items will be initialized by JS -->
+                <div id="checklist-container" class="space-y-4 text-xs">
+                    <!-- Categorized Checklist items will be initialized by JS -->
                 </div>
 
                 <!-- Add Checklist Item -->
-                <div class="flex space-x-2 pt-2 border-t border-muji-light">
-                    <input type="text" id="new-todo-text" placeholder="新增旅行打包準備項目..." class="flex-grow bg-muji-light border border-muji-border rounded-lg text-xs px-3 py-2 text-muji-dark focus:outline-none focus:border-muji-primary">
-                    <button onclick="addChecklistItem()" class="bg-muji-primary text-white px-3 py-2 rounded-lg text-xs font-bold active:scale-95 transition-all font-jp">新增</button>
+                <div class="flex flex-col space-y-2 pt-2 border-t border-muji-light">
+                    <div class="flex space-x-2">
+                        <select id="new-todo-category" class="bg-muji-light border border-muji-border rounded-lg text-[10px] px-1 py-2 text-muji-dark focus:outline-none focus:border-muji-primary font-medium w-1/3">
+                            <option value="憑證文件">憑證文件</option>
+                            <option value="財務金融">財務金融</option>
+                            <option value="盥洗用具">盥洗用具</option>
+                            <option value="生活用品">生活用品</option>
+                            <option value="化妝/保養品">化妝/保養品</option>
+                            <option value="常用藥品">常用藥品</option>
+                            <option value="裝備/電子設備 (隨身)">裝備 (隨身)</option>
+                            <option value="裝備/電子設備 (託運)">裝備 (託運)</option>
+                            <option value="衣物鞋">衣物鞋</option>
+                            <option value="其它">其它</option>
+                        </select>
+                        <input type="text" id="new-todo-text" placeholder="新增旅行打包準備項目..." class="flex-grow bg-muji-light border border-muji-border rounded-lg text-xs px-3 py-2 text-muji-dark focus:outline-none focus:border-muji-primary">
+                    </div>
+                    <button onclick="addChecklistItem()" class="w-full bg-muji-primary text-white py-2 rounded-lg text-xs font-bold active:scale-95 transition-all font-jp">新增至對應清單</button>
                 </div>
             </div>
 
             <!-- Intelligent Memo Pad -->
             <div class="bg-muji-card rounded-2xl p-4 border border-muji-border shadow-sm space-y-4">
-                <div class="flex justify-between items-center border-b border-muji-light pb-2">
-                    <span class="text-xs font-bold text-muji-dark tracking-wider font-jp">
+                <div class="flex justify-between items-center border-b border-muji-light pb-2 font-jp">
+                    <span class="text-xs font-bold text-muji-dark tracking-wider">
                         <i class="fa-solid fa-clipboard mr-1.5 text-muji-accent"></i> 隨手筆記 (網址自動轉按鈕)
                     </span>
                     <span class="text-[9px] text-muji-secondary font-jp">自動儲存 ｜ 支援連結</span>
@@ -699,18 +852,18 @@
                     </div>
                     <div class="flex justify-between items-center bg-muji-light p-2 rounded-lg">
                         <span class="font-bold font-jp">消防局 ➔ 救護車</span>
-                        <a href="tel:119" class="text-muji-accent font-bold"><i class="fa-solid fa-phone mr-1"></i>119</a>
+                        <a href="tel:119" class="text-muji-accent font-bold font-mono"><i class="fa-solid fa-phone mr-1"></i>119</a>
                     </div>
                     <div class="flex justify-between items-center bg-muji-light p-2 rounded-lg">
                         <span class="font-bold font-jp">海上保安廳 (海難報案)</span>
-                        <a href="tel:118" class="text-muji-accent font-bold"><i class="fa-solid fa-phone mr-1"></i>118</a>
+                        <a href="tel:118" class="text-muji-accent font-bold font-mono"><i class="fa-solid fa-phone mr-1"></i>118</a>
                     </div>
                     <div class="flex justify-between items-center bg-muji-light p-2 rounded-lg">
                         <div>
                             <span class="font-bold block font-jp">台北駐日代表處 那霸分處</span>
                             <span class="text-[9px] text-muji-secondary font-jp">急難救助專線</span>
                         </div>
-                        <a href="tel:+81-90-1942-1107" class="text-muji-accent font-bold whitespace-nowrap"><i class="fa-solid fa-phone mr-1"></i>090-1942-1107</a>
+                        <a href="tel:+81-90-1942-1107" class="text-muji-accent font-bold whitespace-nowrap font-mono"><i class="fa-solid fa-phone mr-1"></i>090-1942-1107</a>
                     </div>
                 </div>
             </div>
@@ -772,12 +925,12 @@
         <div class="bg-muji-card border border-muji-border rounded-2xl max-w-sm w-full p-5 space-y-4 shadow-xl">
             <div class="text-center space-y-1.5 font-jp">
                 <span class="text-2xl text-muji-accent block"><i class="fa-solid fa-circle-question"></i></span>
-                <h3 class="text-sm font-bold text-muji-dark">確認執行此操作？</h3>
+                <h3 class="text-sm font-bold text-muji-dark font-jp">確認執行此操作？</h3>
                 <p id="confirm-modal-msg" class="text-xs text-muji-secondary leading-relaxed">提示訊息說明</p>
             </div>
             <div class="flex space-x-3 text-xs font-bold pt-1">
-                <button onclick="hideConfirmModal()" class="flex-1 bg-muji-light text-muji-dark py-2.5 rounded-lg active:scale-95 transition-all">取消</button>
-                <button id="confirm-modal-ok-btn" class="flex-1 bg-muji-accent text-white py-2.5 rounded-lg active:scale-95 transition-all">確定</button>
+                <button onclick="hideConfirmModal()" class="flex-1 bg-muji-light text-muji-dark py-2.5 rounded-lg active:scale-95 transition-all font-jp">取消</button>
+                <button id="confirm-modal-ok-btn" class="flex-1 bg-muji-accent text-white py-2.5 rounded-lg active:scale-95 transition-all font-jp">確定</button>
             </div>
         </div>
     </div>
@@ -813,7 +966,8 @@
                         time: "20:30",
                         title: "【逸之彩溫馨迎賓拉麵宵夜】",
                         desc: "大廳每日 17:00 - 22:00 免費提供 Orion 生啤酒、沖繩泡盛、冰淇淋與軟性飲料無限暢飲；大廳每晚 20:00 - 21:00 現場提供現煮拉麵宵夜（熟食）。",
-                        transport: "免移動，直接在逸之彩飯店 1F 大廳與戶外溫泉中庭休憩。"
+                        transport: "免移動，直接在逸之彩飯店 1F 大廳與戶外溫泉中庭休憩。",
+                        maps: "Okinawa Hinode Hotel"
                     },
                     {
                         time: "21:15",
@@ -845,8 +999,8 @@
                         title: "【港川外人住宅選物散策】",
                         desc: "漫步美軍眷村改建的繽紛小屋區，有許多獨立原創手作選物店。今日必逛：oHacorté 水果塔 (18號屋)（沖繩首屈一指的網美老宅甜點店）。",
                         transport: "🚗 出發時間：09:50 自租車點發車。自駕前往浦添市港川 (開車時間約 25 分鐘)。",
-                        maps: "港川外人住宅",
-                        mapcode: "33 341 123*82",
+                        maps: "港川ステイツサイドコインパーキング",
+                        mapcode: "33 341 031*00",
                         shops: ["oHacorté 水果塔 (18號屋) 🥧", "獨立手作選物店 🛍️"]
                     },
                     {
@@ -872,17 +1026,17 @@
                         title: "【永旺夢樂城 (AEON Mall Rycom)】",
                         desc: "今日必逛：UNIQLO & GU (2F 雙旗艦大店)（沖繩最大免稅店，大採購直接裝車，媽媽免提！）、AEON Style 超市 (1F)（買黑糖抹醬、島辣油）。",
                         transport: "🚗 出發時間：13:35 自港川出發。自駕前往北中城村泡瀨 (開車時間約 20 分鐘)。",
-                        maps: "AEON MALL Okinawa Rycom",
-                        mapcode: "33 530 406*45",
+                        maps: "Ion Mall Okinawaraikamu Center Parking Lot",
+                        mapcode: "33 530 386*56",
                         shops: ["UNIQLO & GU (2F雙旗艦店) 👕", "AEON Style 超市 (1F) 🛒", "黑糖抹醬 / 島辣油 🌶️"]
                     },
                     {
                         time: "17:00",
                         title: "【美國村樂古飯店 Check-in ➔ Depot Island 漫步】",
-                        desc: "【卸貨後・黃金散步時間】至海濱飯店放好戰利品後，趁著夕陽漫步於七彩斑斕的 Depot Island 美式復古街區，海風徐徐，浪漫至極。今日必逛：Habu Box (2F)、SOHO (1F)。",
+                        desc: "【卸貨後・黃金散步時間】至海濱飯店放好戰利品後，趁著夕陽漫步於七彩斑斕的 Depot Island 美式復古街區，海風徐徐，浪漫至極。今日必逛：Habu Box (2F)、SOHO (1F).",
                         transport: "🚗 出發時間：16:40 自永旺夢樂城出發。自駕前往美國村北谷溫泉樂古飯店 (開車時間約 15 分鐘)。",
-                        maps: "Lequ Okinawa Chatan Spa",
-                        mapcode: "33 525 860*54",
+                        maps: "LeQu 停車場",
+                        mapcode: "33 525 626*52",
                         shops: ["Habu Box (2F原創服飾) 👕", "SOHO (1F美式雜貨) 🇺🇸", "Depot Island 濱海步道 🌅"]
                     },
                     {
@@ -907,34 +1061,34 @@
                         desc: "清晨避開人潮早出發，由女兒手握方向盤專心駕駛。媽媽坐在視野最好的副駕駛座愜意看海，開啟美好的一天。",
                         transport: "🚗 出發時間：08:15 自美國村樂古飯店出發。由女兒開車自駕北上 (車程約 1 小時 15 分鐘)。",
                         important: true,
-                        maps: "Lequ Okinawa Chatan Spa",
-                        mapcode: "33 525 860*54"
+                        maps: "古宇利島大橋南端_駐車場",
+                        mapcode: "485 601 862*50"
                     },
                     {
                         time: "09:30",
                         title: "【古宇利島面海咖啡廳看海】",
-                        desc: "抵達最美的古宇利島，找一家絕美靠海咖啡館，陪伴媽媽喝著咖啡點心，看Tiffany藍的海域整整一小時 (09:30-10:30)。",
-                        transport: "開車跨越古宇利大橋 (MapCode: 485 601 873*12) ➔ 抵達咖啡廳。",
-                        maps: "古宇利大橋",
-                        mapcode: "485 601 873*12",
+                        desc: "抵達最美的古宇利島，找一家靠海的景觀咖啡廳，陪媽媽喝著熱拿鐵、吃點心，靜靜眺望 Tiffany 藍的海水，享受一小時最放鬆的望海晨光。",
+                        transport: "開車跨越古宇利大橋 ➔ 抵達海景咖啡廳，預計停留 1 小時 (09:30-10:30)。",
+                        maps: "古宇利島 パリッティ",
+                        mapcode: "485 723 484*66",
                         shops: ["古宇利大橋海景咖啡廳 ☕", "古宇利大橋與跨海沙灘 🏖️"]
                     },
                     {
                         time: "11:10",
-                        title: "【備瀨福木林道幽靜綠廊慢步】",
+                        title: "【備瀨福木林道幽靜慢步】",
                         desc: "高大福木夾道的古老村落，林蔭遮陽非常涼爽，路面平緩好走。手牽手與媽媽漫步在綠廊隧道中，聽濤看海，享受大自然的清心片刻。",
                         transport: "🚗 10:30 驅車離開古宇利島，自駕前往備瀨福木林道 (車程約 35 分鐘，約 11:10 抵達)。",
-                        maps: "備瀨福木林道",
-                        mapcode: "553 135 595*60",
+                        maps: "Biseno Fukugi Namikimuryo Parking Lot",
+                        mapcode: "553 105 625*25",
                         shops: ["備瀨福木林道綠意散步路 🌲", "備瀨海濱步道 🌊"]
                     },
                     {
                         time: "12:00",
-                        title: "【中餐：[福木屋 (Fukugiya)] 沖繩料理】",
+                        title: "【中餐：福木屋 (Fukugiya) 沖繩料理】",
                         desc: "在林道深處的傳統沖繩古民居木造老屋內，享用最道地的熟食沖繩麵與定食，湯頭溫和暖胃，長輩非常滿意。",
                         transport: "步行前往林道內的古民家餐廳。",
-                        maps: "Fukugiya Bise",
-                        mapcode: "553 135 738*30",
+                        maps: "Fukugiya フクギ屋",
+                        mapcode: "553 105 564*32",
                         shops: ["福木屋 (Fukugiya) 🍜", "傳統沖繩麵定食 (熟食) 🍥"]
                     },
                     {
@@ -949,8 +1103,8 @@
                         title: "【自駕前往永旺夢樂城二次補貨】",
                         desc: "中餐吃飽也休息足夠，驅車前往大商場採購補貨！把戰利品通通塞進 N-BOX 後車廂，媽媽不費一分力。",
                         transport: "🚗 13:40 啟程南下中部 (開車行經快速道路，時間約 55 分鐘，14:40 抵達)。",
-                        maps: "AEON MALL Okinawa Rycom",
-                        mapcode: "33 530 406*45",
+                        maps: "Ion Mall Okinawaraikamu Center Parking Lot",
+                        mapcode: "33 530 386*56",
                         shops: ["UNIQLO & GU 👕", "AEON Style 超市買抹醬辣油 🛒"]
                     },
                     {
@@ -958,8 +1112,8 @@
                         title: "【返回美國村 Depot Island 深度慢步散策】",
                         desc: "將戰利品先提回房內放好。午後氣候漸趨溫和，牽著媽媽漫步在 Depot Island 的美式彩虹異國街區、踏踩海風，悠閒又浪漫。",
                         transport: "🚗 自駕返回樂古飯店放行李 (車程約 15 分鐘) ➔ 🚶 步行進入美國村美濱街區。",
-                        maps: "Lequ Okinawa Chatan Spa",
-                        mapcode: "33 525 860*54",
+                        maps: "LeQu 停車場",
+                        mapcode: "33 525 626*52",
                         shops: ["美國村濱海落日步道 🌅", "美式設計原創選物 🛍️"]
                     },
                     {
@@ -967,15 +1121,15 @@
                         title: "【晚餐：[美浜殿內] 濱海琉球料理】",
                         desc: "在臨海的沖繩傳統古民家建築中，與媽媽一邊欣賞美濱海岸的迷人海夜景，一邊享用熱呼呼的阿古豬熟食定食、沖繩麵、炒苦瓜等經典在地手作風味。",
                         transport: "🚶 步行前往 (沿著美濱海濱步道散步約 4 分鐘即達)。",
-                        maps: "Mihama Dunchi",
-                        mapcode: "33 525 841*04",
+                        maps: "美浜殿内(みはまどぅんち/Mihama Dunchi)",
+                        mapcode: "33 525 534*25",
                         shops: ["美浜殿内 (Mihama Dunchi) 🏮", "經典阿古豬熟食定食 🍲", "海景露台座 🌊"]
                     }
                 ]
             },
             {
                 day: 4,
-                title: "自駕南下 ➔ 瀨長島小希臘 ➔ 幸福鬆餅 ➔ 逸之彩二次入住",
+                title: "自駕南下 ➔ 瀨長島奶油蝦 ➔ 幸福鬆餅 ➔ 那霸頂級肉心燒肉",
                 date: "03/31 (三)",
                 events: [
                     {
@@ -983,14 +1137,14 @@
                         title: "【瀨長島 Umikaji Terrace】",
                         desc: "藍天與整片純白階梯式地中海建築相映，可近距離觀賞飛機在眼前震撼降落。今日必逛：Gallirallus (46號店)（超人氣漸層花草蘇打）。",
                         transport: "🚗 出發時間：10:20 自北谷樂古飯店退房出發。自駕南下前往「瀨長島」 (開車時間約 40 分鐘)。",
-                        maps: "瀨長島",
-                        mapcode: "33 002 602*33",
+                        maps: "サンセットパーク第２駐車場",
+                        mapcode: "33 002 638*47",
                         shops: ["Gallirallus (46號漸層蘇打) 🍹", "純白階梯建築 🏛️"]
                     },
                     {
                         time: "12:30",
                         title: "【午餐：by・The・Shrimp 夏威夷大蒜蝦】",
-                        desc: "【午餐時間】坐在露天海景餐座，一邊吹著海風、看著客機在眼前震撼起降，一邊與媽媽品嚐香脆多汁、金黃酥脆的招牌大蒜奶油熟蝦餐盒。",
+                        desc: "【午餐時間】坐在露天海景餐座，一邊吹著海風、看著客機在眼前震撼起降，一邊與媽媽品嚐金黃酥脆的招牌大蒜奶油熟蝦餐盒。",
                         transport: "🚶 步行至 Umikaji Terrace 露天海景餐座 (步行約 2 分鐘)。",
                         maps: "by The Shrimp Senagajima",
                         mapcode: "33 002 602*33",
@@ -1008,7 +1162,7 @@
                     {
                         time: "17:00",
                         title: "【返回逸之彩飯店辦理 Check-in】",
-                        desc: "返回飯店放妥行李。今天自此不需再辛苦開車，母女倆可徹底放鬆，晚上的餐廳距離飯店非常近，行程極為優雅。",
+                        desc: "返回那霸飯店放妥行李。今天自此不需再辛苦開車，母女倆可徹底放鬆，晚上的餐廳距離飯店非常近，行程極為優雅。",
                         transport: "🚗 出發時間：16:30 自瀨長島出發。自駕前往那霸逸之彩飯店 (開車時間約 15 分鐘)。",
                         maps: "那霸逸之彩溫泉度假飯店",
                         mapcode: "33 158 522*47",
@@ -1020,7 +1174,7 @@
                         desc: "【晚餐時間】今晚不開車、不找車位！陪媽媽散步去吃極致頂級的肉類料理專門店。可以毫無顧慮地大口享用極品燒肉，喝著冰涼生啤酒，愜意慶祝溫馨旅程過半。",
                         transport: "🚶 自逸之彩飯店大廳步行約 5-8 分鐘即可輕鬆抵達餐廳，媽媽非常省力。",
                         maps: "肉心 極み肉専門店 牧志店",
-                        mapcode: "33 002 602*33",
+                        mapcode: "33 158 451*30",
                         shops: ["肉心 極み肉専門店 🥩", "極上和牛燒肉 (熟食) 🥩", "日式生啤酒 🍺"]
                     }
                 ]
@@ -1035,8 +1189,8 @@
                         title: "【SAN-A 浦添西海岸 PARCO CITY】",
                         desc: "【自駕採購最省力】直奔大商場採購，戰利品直接放 N-BOX 車尾箱，隨後先回逸之彩飯店房間卸貨，最舒服！",
                         transport: "🚗 出發時間：10:15 自飯店地下室出發。自駕前往「SAN-A PARCO CITY」 (開車時間約 15 分鐘)。",
-                        maps: "SAN-A PARCO CITY",
-                        mapcode: "33 339 031*00",
+                        maps: "パルコシティ 展望デッキ",
+                        mapcode: "33 339 062*25",
                         shops: ["松本清藥妝 (1F) 💄", "Loft 日系文具 (3F) ✏️", "MUJI 無印良品 (1F) 🌿", "San-A 食品館超市 (1F) 🍿"]
                     },
                     {
@@ -1122,8 +1276,8 @@
                     {
                         time: "18:30",
                         title: "【晚餐與採購：MaxValu 牧志店】",
-                        desc: "【最放鬆的採購晚餐】今晚陪著媽媽在 MaxValu 24小時連鎖超市愜意採購，挑選高檔又實惠的沖繩限定和牛便當、黑鮪魚生魚片、特製握壽司、與和歌山新鮮草莓。買完直接步行 3 分鐘回飯店，在大廳或露天溫泉中庭一邊享用超市高CP值美食，一邊配上飯店免費提供的生啤酒與Orion生啤、泡盛無限暢飲，母女倆放鬆聊心，最為自在！",
-                        transport: "🚶 自國際通商圈散步約 5 分鐘即可抵達超市。採購後步行 3 分鐘即可返抵逸之彩飯店。",
+                        desc: "【最放鬆的採購晚餐】今晚陪著媽媽在 MaxValu 24小時連鎖超市精選大逛。採購沖繩特產熟食、新鮮肥美的黑鮪魚生魚片、綜合壽司盤、與和歌山新鮮草莓。買完直接步行 3 分鐘回飯店大廳休憩區或露天溫泉中庭，搭配飯店 17:00-22:00 免費無限暢飲的 Orion 生啤酒、沖繩泡盛、冰淇淋與飲品，母女倆一邊品嚐一邊漫談，最是放鬆自在！",
+                        transport: "🚶 自國際通商圈步行約 5 分鐘抵達。採購後步行 3 分鐘即可返抵逸之彩飯店。",
                         maps: "MaxValu 牧志店",
                         shops: ["MaxValu 24H連鎖超市 🛒", "黑鮪魚生魚片 🍣", "和歌山鮮草莓 🍓", "飯店免費自助生啤酒 🍺"]
                     }
@@ -1228,34 +1382,128 @@
             }
         ];
 
-        // Default Checklist Data
-        const defaultChecklist = [
-            { id: 1, text: "護照與身分證（確認效期大於 6 個月）", checked: true },
-            { id: 2, text: "媽媽的常用保健藥品 / 防蚊液 / 護膚防曬", checked: false },
-            { id: 3, text: "日本入境 Visit Japan Web 申報截圖", checked: false },
-            { id: 4, text: "自駕駕照正本 與 日文譯本（務必隨身帶！）", checked: false },
-            { id: 5, text: "日幣現金、行動網卡 / 隨身 Wi-Fi 設定", checked: true },
-            { id: 6, text: "行動電源、相機、手電筒、充電轉接頭", checked: false },
-            { id: 7, text: "折疊晴雨兩用傘（防陽光也防午後陣雨）", checked: false },
-            { id: 8, text: "一雙極度好走、透氣防滑的步鞋", checked: false }
+        // ================= DYNAMIC CATEGORIZED CHECKLIST =================
+        const defaultChecklist = {
+            "憑證文件": [
+                { id: "doc-1", text: "護照正本&影本", checked: false },
+                { id: "doc-2", text: "行程手冊", checked: false },
+                { id: "doc-3", text: "電子機票(影本)", checked: false },
+                { id: "doc-4", text: "入住憑證(影本)", checked: false },
+                { id: "doc-5", text: "日本交通憑證 (影本)", checked: false },
+                { id: "doc-6", text: "2吋大頭照(2張)", checked: false }
+            ],
+            "財務金融": [
+                { id: "fin-1", text: "日幣現金", checked: false },
+                { id: "fin-2", text: "台幣($3000備用金)", checked: false },
+                { id: "fin-3", text: "信用卡(回饋>手續費)", checked: false },
+                { id: "fin-4", text: "悠遊卡(餘額需$100)", checked: false }
+            ],
+            "盥洗用具": [
+                { id: "toi-1", text: "洗面/卸妝乳", checked: false },
+                { id: "toi-2", text: "洗髮乳/香皂(飯店有)", checked: false },
+                { id: "toi-3", text: "牙刷/牙膏(飯店有)", checked: false },
+                { id: "toi-4", text: "毛巾/浴巾", checked: false },
+                { id: "toi-5", text: "洗臉髮箍", checked: false },
+                { id: "toi-6", text: "換洗衣物袋(數個)", checked: false },
+                { id: "toi-7", text: "棉花棒", checked: false }
+            ],
+            "生活用品": [
+                { id: "life-1", text: "頸枕/耳塞", checked: false },
+                { id: "life-2", text: "太陽眼鏡", checked: false },
+                { id: "life-3", text: "酒精濕紙巾", checked: false },
+                { id: "life-4", text: "小包衛生紙", checked: false },
+                { id: "life-5", text: "衛生棉", checked: false },
+                { id: "life-6", text: "梳子/髮夾/髮飾", checked: false },
+                { id: "life-7", text: "口罩(5-10個)", checked: false },
+                { id: "life-8", text: "護手霜", checked: false }
+            ],
+            "化妝/保養品": [
+                { id: "cos-1", text: "面膜/化妝水", checked: false },
+                { id: "cos-2", text: "乳液/護髮", checked: false },
+                { id: "cos-3", text: "防曬乳/粉底液", checked: false },
+                { id: "cos-4", text: "化妝棉/美妝蛋", checked: false },
+                { id: "cos-5", text: "化妝刷/定妝", checked: false },
+                { id: "cos-6", text: "眼影/眉筆", checked: false },
+                { id: "cos-7", text: "口紅/護唇膏", checked: false },
+                { id: "cos-8", text: "鏡子", checked: false }
+            ],
+            "常用藥品": [
+                { id: "med-1", text: "感冒藥", checked: false },
+                { id: "med-2", text: "過敏藥", checked: false },
+                { id: "med-3", text: "暈車藥", checked: false },
+                { id: "med-4", text: "個人藥品", checked: false },
+                { id: "med-5", text: "腸胃藥/止瀉藥", checked: false },
+                { id: "med-6", text: "防蚊液(<100ml)", checked: false }
+            ],
+            "裝備/電子設備 (隨身)": [
+                { id: "elec-s1", text: "手機", checked: false },
+                { id: "elec-s2", text: "藍芽耳機", checked: false },
+                { id: "elec-s3", text: "行動電源", checked: false },
+                { id: "elec-s4", text: "手機WiFi SIM卡", checked: false }
+            ],
+            "裝備/電子設備 (託運)": [
+                { id: "elec-t1", text: "手機用USB", checked: false },
+                { id: "elec-t2", text: "充電器/充電線", checked: false },
+                { id: "elec-t3", text: "插座/延長線", checked: false },
+                { id: "elec-t4", text: "當地用轉接頭", checked: false }
+            ],
+            "衣物鞋": [
+                { id: "cloth-1", text: "有領服裝(2套)", checked: false },
+                { id: "cloth-2", text: "內衣褲/襪子(3套)", checked: false },
+                { id: "cloth-3", text: "褲子(3套)", checked: false },
+                { id: "cloth-4", text: "休閒服(1~2套)", checked: false },
+                { id: "cloth-5", text: "帽子/圍巾/手套", checked: false },
+                { id: "cloth-6", text: "外套(保暖衣物)", checked: false },
+                { id: "cloth-7", text: "布鞋/涼鞋", checked: false },
+                { id: "cloth-8", text: "睡衣褲", checked: false }
+            ],
+            "其它": [
+                { id: "oth-1", text: "摺疊傘", checked: false },
+                { id: "oth-2", text: "隨身包", checked: false },
+                { id: "oth-3", text: "環保購物袋", checked: false },
+                { id: "oth-4", text: "夾鏈袋(裝錢用)", checked: false },
+                { id: "oth-5", text: "原子筆/螢光筆", checked: false },
+                { id: "oth-6", text: "筆記本/手寫紙", checked: false }
+            ]
+        };
+
+        const dateMapping = {
+            "2026-03-28": "03/28 (日) Day 1 - 星夜與海風",
+            "2026-03-29": "03/29 (一) Day 2 - 公路上哼歌",
+            "2026-03-30": "03/30 (二) Day 3 - 蔚藍與綠廊",
+            "2026-03-31": "03/31 (三) Day 4 - 階梯上的海",
+            "2026-04-01": "04/01 (四) Day 5 - 海景與家常",
+            "2026-04-02": "04/02 (五) Day 6 - 崖上的神社",
+            "2026-04-03": "04/03 (六) Day 7 - 市井煙火氣",
+            "2026-04-04": "04/04 (日) Day 8 - 封裝琉球藍"
+        };
+
+        // Default Pre-trip Expenses Data (台幣 TWD 計價，不參與日幣雙幣換算，完全隔離獨立)
+        const defaultPretrip = [
+            { id: 1, category: "機票", itemName: "星宇航空雙人來回", amount: 24500, pax: 2, vendor: "星宇航空官網", method: "刷卡" },
+            { id: 2, category: "住宿", itemName: "逸之彩溫泉飯店+樂古度假村", amount: 18200, pax: 2, vendor: "Agoda訂房平台", method: "刷卡" },
+            { id: 3, category: "網路eSIM", itemName: "雙人日本5G吃到飽網卡", amount: 980, pax: 2, vendor: "Klook客路", method: "刷卡" },
+            { id: 4, category: "租車", itemName: "本田 HONDA N-BOX 租車預約", amount: 6800, pax: 2, vendor: "Samurai Dream", method: "刷卡" },
+            { id: 5, category: "其他票券", itemName: "幸福鬆餅與景點門票預留金", amount: 3000, pax: 2, vendor: "雙人實體通路", method: "現金" }
         ];
 
-        // Date Display Formatter Mapping
-        const dateMapping = {
-            "2026-03-28": "03/28 (日) Day 1",
-            "2026-03-29": "03/29 (一) Day 2",
-            "2026-03-30": "03/30 (二) Day 3",
-            "2026-03-31": "03/31 (三) Day 4",
-            "2026-04-01": "04/01 (四) Day 5",
-            "2026-04-02": "04/02 (五) Day 6",
-            "2026-04-03": "04/03 (六) Day 7",
-            "2026-04-04": "04/04 (日) Day 8"
+        // Monochrome consistent FontAwesome Icon Map for Categories
+        const categoryIcons = {
+            "交通票卷": "fa-solid fa-train-subway",
+            "藥品彩妝": "fa-solid fa-wand-magic-sparkles",
+            "飾品服裝": "fa-solid fa-shirt",
+            "療癒小物": "fa-solid fa-face-smile",
+            "餐飲甜點": "fa-solid fa-mug-saucer",
+            "超市購物": "fa-solid fa-basket-shopping",
+            "生活用品": "fa-solid fa-pump-soap",
+            "其它購物": "fa-solid fa-bag-shopping"
         };
 
         // ================= APP STATE (LOCAL STORAGE) =================
         let ledger = JSON.parse(localStorage.getItem('okinawa_ledger')) || [];
-        let checklist = JSON.parse(localStorage.getItem('okinawa_checklist')) || defaultChecklist;
+        let checklist = JSON.parse(localStorage.getItem('okinawa_checklist_v2')) || defaultChecklist;
         let memoText = localStorage.getItem('okinawa_memo') || "";
+        let pretripExpenses = JSON.parse(localStorage.getItem('okinawa_pretrip')) || defaultPretrip;
         let uploadedImageBase64 = null;
 
         // Custom Confirmation Callback Cache
@@ -1270,29 +1518,26 @@
             renderItinerary();
             renderLedgerList();
             renderChecklist();
+            renderPretripExpenses();
             initMemo();
             switchTab('plan'); // Start with the plan tab
         };
 
         // ================= TAB ROUTER =================
         function switchTab(tabId) {
-            // Hide all pages
             const pages = ['plan', 'guide', 'wallet', 'lists', 'info'];
             pages.forEach(p => {
                 document.getElementById(`page-${p}`).classList.add('hidden');
-                // Deactivate buttons
                 const btn = document.getElementById(`nav-${p}`);
                 btn.classList.remove('text-muji-primary');
                 btn.classList.add('text-muji-secondary');
             });
 
-            // Show active page
             document.getElementById(`page-${tabId}`).classList.remove('hidden');
             const activeBtn = document.getElementById(`nav-${tabId}`);
             activeBtn.classList.remove('text-muji-secondary');
             activeBtn.classList.add('text-muji-primary');
 
-            // Scroll to top of page
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -1305,7 +1550,6 @@
             modal.classList.add('opacity-100');
         }
 
-        // Hide Confirm Modal
         function hideConfirmModal() {
             const modal = document.getElementById('confirm-modal');
             modal.classList.remove('opacity-100');
@@ -1313,7 +1557,6 @@
             onConfirmCallback = null;
         }
 
-        // Setup listener on modal confirm button
         document.getElementById('confirm-modal-ok-btn').addEventListener('click', function() {
             if (typeof onConfirmCallback === 'function') {
                 onConfirmCallback();
@@ -1341,7 +1584,7 @@
             itineraryData.forEach(dayData => {
                 const dayCard = document.createElement('div');
                 dayCard.id = `day-anchor-${dayData.day}`;
-                dayCard.className = "bg-muji-card rounded-2xl border border-muji-border p-4 shadow-sm space-y-4";
+                dayCard.className = "bg-muji-card rounded-2xl border border-muji-border p-4 shadow-sm space-y-4 scroll-mt-[120px]";
                 
                 let eventsHtml = '';
                 dayData.events.forEach((ev, idx) => {
@@ -1431,28 +1674,27 @@
             });
         }
 
+        // Native Smooth Day Scrolling Engine (Bulletproof Mobile WebView Fix)
         function scrollToDay(dayNum) {
-            // Update selected Day button styles
+            // Update day switcher button active styles
             document.querySelectorAll('.day-btn').forEach(btn => {
                 btn.classList.remove('bg-muji-primary', 'text-white', 'border-muji-primary');
                 btn.classList.add('bg-muji-card', 'text-muji-dark', 'border-muji-border');
             });
             const activeBtn = document.getElementById(`btn-day-${dayNum}`);
-            activeBtn.classList.remove('bg-muji-card', 'text-muji-dark', 'border-muji-border');
-            activeBtn.classList.add('bg-muji-primary', 'text-white', 'border-muji-primary');
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-muji-card', 'text-muji-dark', 'border-muji-border');
+                activeBtn.classList.add('bg-muji-primary', 'text-white', 'border-muji-primary');
+                
+                // Centering the active button in horizontal scroll row nicely
+                activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            }
 
-            // Scroll smoothly to anchor with offset for sticky selectors
+            // Fire native high-accuracy engine using css scroll margins
             const element = document.getElementById(`day-anchor-${dayNum}`);
-            const offset = 115; // Header + Sticky Daily Selector combined height
-            const bodyRect = document.body.getBoundingClientRect().top;
-            const elementRect = element.getBoundingClientRect().top;
-            const elementPosition = elementRect - bodyRect;
-            const offsetPosition = elementPosition - offset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
 
         // ================= EXCHANGE RATE CALCULATOR =================
@@ -1473,7 +1715,6 @@
                     calcExprStr = "0";
                 }
             } else if (val === 'copy') {
-                // Parse the evaluated JPY number
                 let targetJpy = 0;
                 try {
                     const cleanExpr = calcExprStr.replace(/×/g, '*').replace(/÷/g, '/');
@@ -1517,10 +1758,8 @@
                 isEvaluated = false;
             }
 
-            // Update calculation UI
             displayExpr.innerText = calcExprStr;
             
-            // Render Live conversion estimates
             try {
                 const cleanExpr = calcExprStr.replace(/×/g, '*').replace(/÷/g, '/');
                 const rawJpy = eval(cleanExpr) || 0;
@@ -1529,6 +1768,152 @@
             } catch (e) {
                 // Ignore intermediate eval fails gracefully
             }
+        }
+
+        // ================= PRE-TRIP EXPENSES FUNCTIONS =================
+        function renderPretripExpenses() {
+            const container = document.getElementById('pretrip-list-container');
+            container.innerHTML = '';
+            let total = 0;
+
+            if (pretripExpenses.length === 0) {
+                container.innerHTML = `<div class="text-xs text-muji-secondary text-center py-4 italic font-jp">目前無行前花費記錄</div>`;
+                document.getElementById('pretrip-total').innerText = `NT$ 0`;
+                return;
+            }
+
+            pretripExpenses.forEach(item => {
+                total += item.amount;
+                const div = document.createElement('div');
+                div.className = "bg-muji-light/30 p-3.5 rounded-xl border border-muji-border/50 space-y-2 text-xs font-jp";
+                div.innerHTML = `
+                    <!-- Top Row: Category and Name (Wrapped to avoid truncation) -->
+                    <div class="flex items-start justify-between space-x-2">
+                        <div class="space-y-1 flex-grow min-w-0">
+                            <div class="flex items-center flex-wrap gap-1.5">
+                                <span class="bg-muji-warm/40 text-muji-dark text-[10px] px-1.5 py-0.5 rounded font-bold shrink-0">${item.category}</span>
+                                <span class="font-bold text-muji-dark text-sm leading-snug break-words">${item.itemName}</span>
+                            </div>
+                            <p class="text-[11px] text-muji-secondary">管道：${item.vendor} ｜ 支付方式：${item.method}</p>
+                        </div>
+                        <!-- Action Buttons -->
+                        <div class="flex space-x-1 shrink-0 pt-0.5">
+                            <button onclick="editPretripItem(${item.id})" class="text-muji-primary hover:text-muji-dark p-1.5 transition-colors" title="編輯">
+                                <i class="fa-solid fa-pen-to-square text-sm"></i>
+                            </button>
+                            <button onclick="deletePretripItem(${item.id})" class="text-red-400 hover:text-red-600 p-1.5 transition-colors" title="刪除">
+                                <i class="fa-regular fa-trash-can text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Bottom Row: Price and Pax Summary -->
+                    <div class="flex justify-between items-center border-t border-muji-border/20 pt-1.5">
+                        <span class="text-[10px] text-muji-secondary font-medium">預算小計</span>
+                        <span class="font-bold text-muji-dark font-mono text-xs">
+                            NT$ ${item.amount.toLocaleString()} 
+                            <span class="text-[10px] text-muji-secondary font-jp font-normal">(${item.pax}人)</span>
+                        </span>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+            document.getElementById('pretrip-total').innerText = `NT$ ${total.toLocaleString()}`;
+        }
+
+        function addPretripItem(e) {
+            e.preventDefault();
+            const editId = document.getElementById('pretrip-edit-id').value;
+            const category = document.getElementById('pretrip-category').value;
+            const itemName = document.getElementById('pretrip-item-name').value.trim();
+            const amountInput = document.getElementById('pretrip-amount');
+            const paxInput = document.getElementById('pretrip-pax');
+            const vendorInput = document.getElementById('pretrip-vendor');
+            const method = document.getElementById('pretrip-method').value;
+
+            const amount = Math.round(parseFloat(amountInput.value)) || 0;
+            const pax = Math.round(parseFloat(paxInput.value)) || 1;
+            const vendor = vendorInput.value.trim();
+
+            if (!itemName || !vendor || amount <= 0) {
+                showToast("請填寫正確欄位");
+                return;
+            }
+
+            if (editId) {
+                pretripExpenses = pretripExpenses.map(item => {
+                    if (item.id == editId) {
+                        return { ...item, category, itemName, amount, pax, vendor, method };
+                    }
+                    return item;
+                });
+                showToast(`已成功修改此筆 ${category} 花費`);
+            } else {
+                const item = {
+                    id: Date.now(),
+                    category: category,
+                    itemName: itemName,
+                    amount: amount,
+                    pax: pax,
+                    vendor: vendor,
+                    method: method
+                };
+                pretripExpenses.push(item);
+                showToast(`已儲存這筆行前 ${category} 花費！`);
+            }
+
+            localStorage.setItem('okinawa_pretrip', JSON.stringify(pretripExpenses));
+            resetPretripForm();
+            renderPretripExpenses();
+        }
+
+        function editPretripItem(id) {
+            const item = pretripExpenses.find(x => x.id == id);
+            if (!item) return;
+
+            document.getElementById('pretrip-edit-id').value = item.id;
+            document.getElementById('pretrip-category').value = item.category;
+            document.getElementById('pretrip-item-name').value = item.itemName;
+            document.getElementById('pretrip-amount').value = item.amount;
+            document.getElementById('pretrip-pax').value = item.pax;
+            document.getElementById('pretrip-vendor').value = item.vendor;
+            document.getElementById('pretrip-method').value = item.method;
+
+            document.getElementById('pretrip-btn-submit').innerText = "儲存修改此行前花費";
+            document.getElementById('pretrip-btn-cancel').classList.remove('hidden');
+
+            document.getElementById('pretrip-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function cancelPretripEdit() {
+            resetPretripForm();
+        }
+
+        function resetPretripForm() {
+            document.getElementById('pretrip-edit-id').value = "";
+            document.getElementById('pretrip-item-name').value = "";
+            document.getElementById('pretrip-amount').value = "";
+            document.getElementById('pretrip-pax').value = "2";
+            document.getElementById('pretrip-vendor').value = "";
+            document.getElementById('pretrip-btn-submit').innerText = "新增這筆行前花費";
+            document.getElementById('pretrip-btn-cancel').classList.add('hidden');
+        }
+
+        function deletePretripItem(id) {
+            showConfirmModal("確定要刪除此筆行前花費嗎？", function() {
+                pretripExpenses = pretripExpenses.filter(item => item.id !== id);
+                localStorage.setItem('okinawa_pretrip', JSON.stringify(pretripExpenses));
+                renderPretripExpenses();
+                showToast("已刪除該筆行前花費");
+            });
+        }
+
+        function clearPretrip() {
+            showConfirmModal("確定要重設為預設的行前花費範本嗎？", function() {
+                pretripExpenses = defaultPretrip;
+                localStorage.setItem('okinawa_pretrip', JSON.stringify(pretripExpenses));
+                renderPretripExpenses();
+                showToast("已重設為預設範本");
+            });
         }
 
         // ================= IMAGE COMPRESSION ENGINE =================
@@ -1585,43 +1970,79 @@
             document.getElementById('image-preview-img').src = '';
         }
 
+        // ================= LEDGER CUSTOM DROPDOWN SELECT SYSTEM =================
+        function toggleCategoryDropdown() {
+            const menu = document.getElementById('category-dropdown-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function selectCategory(val, iconClass) {
+            document.getElementById('ledger-category').value = val;
+            document.getElementById('selected-category-text').innerText = val;
+            
+            const iconEl = document.getElementById('selected-category-icon');
+            iconEl.className = `${iconClass} text-muji-accent mr-2`;
+            
+            document.getElementById('category-dropdown-menu').classList.add('hidden');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('category-dropdown-menu');
+            const btn = document.getElementById('category-dropdown-btn');
+            if (dropdown && btn && !btn.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
         // ================= LEDGER GROUPED STORAGE & FUNCTIONS =================
         function addLedgerItem(e) {
             e.preventDefault();
+            const categorySelect = document.getElementById('ledger-category');
             const nameInput = document.getElementById('ledger-name');
+            const detailsInput = document.getElementById('ledger-details');
             const jpyInput = document.getElementById('ledger-jpy');
+            const methodSelect = document.getElementById('ledger-method');
             const dateSelect = document.getElementById('ledger-date');
             const rateInput = document.getElementById('calc-rate');
 
+            const category = categorySelect.value;
             const name = nameInput.value.trim();
+            const details = detailsInput.value.trim();
             const jpy = Math.round(parseFloat(jpyInput.value)) || 0;
+            const method = methodSelect.value;
             const selectedDate = dateSelect.value;
             const rate = parseFloat(rateInput.value) || 0.21;
 
-            if (!name || jpy <= 0) {
-                showToast("請填寫完整的名稱與有效金額");
+            if (!name || !details || jpy <= 0) {
+                showToast("請填寫地點/事件與品項說明");
                 return;
             }
 
             const item = {
                 id: Date.now(),
+                category: category,
                 name: name,
+                details: details,
                 jpy: jpy,
                 twd: Math.round(jpy * rate),
-                date: selectedDate, // Store selected date
+                method: method,
+                date: selectedDate,
                 image: uploadedImageBase64
             };
 
             ledger.push(item);
             localStorage.setItem('okinawa_ledger', JSON.stringify(ledger));
 
-            // Reset Fields
+            // Reset
             nameInput.value = '';
+            detailsInput.value = '';
             jpyInput.value = '';
+            selectCategory('交通票卷', 'fa-solid fa-train-subway');
             clearUploadedImage();
 
             renderLedgerList();
-            showToast("這筆消費已成功歸入日期分類！");
+            showToast("這筆消費已成功歸入日記！");
         }
 
         // Render Grouped Ledger List Natively
@@ -1639,13 +2060,11 @@
                 return;
             }
 
-            // Calculating overall sums
             ledger.forEach(item => {
                 totalJpyAll += item.jpy;
                 totalTwdAll += item.twd;
             });
 
-            // Grouping ledger items by Date natively
             const groups = {};
             ledger.forEach(item => {
                 if (!groups[item.date]) {
@@ -1654,17 +2073,12 @@
                 groups[item.date].push(item);
             });
 
-            // Get unique group dates and sort chronologically (Day 1 -> Day 8)
             const sortedDates = Object.keys(groups).sort((a, b) => a.localeCompare(b));
 
-            // Render each date group
             sortedDates.forEach(dateStr => {
                 const itemsInGroup = groups[dateStr];
-                
-                // Sort items inside the group descending by input timestamp (id)
                 itemsInGroup.sort((x, y) => y.id - x.id);
 
-                // Calculate group totals
                 let groupJpy = 0;
                 let groupTwd = 0;
                 itemsInGroup.forEach(it => {
@@ -1672,7 +2086,6 @@
                     groupTwd += it.twd;
                 });
 
-                // Group Section Header
                 const groupSection = document.createElement('div');
                 groupSection.className = "space-y-2 border-l-2 border-muji-accent pl-3 py-1";
 
@@ -1691,27 +2104,42 @@
 
                 let groupItemsHtml = '<div class="space-y-1.5">';
                 itemsInGroup.forEach(item => {
+                    const iconClass = categoryIcons[item.category] || "fa-solid fa-receipt";
                     groupItemsHtml += `
-                        <div class="bg-muji-light/40 p-2.5 rounded-xl flex items-center justify-between text-xs font-jp">
-                            <div class="flex items-center space-x-2 truncate">
+                        <div class="bg-muji-card border border-muji-border/60 p-3 rounded-xl flex items-start justify-between text-sm font-jp gap-3">
+                            <div class="flex items-start space-x-2.5 truncate flex-grow min-w-0">
                                 ${item.image ? `
-                                    <div class="w-9 h-9 rounded-lg overflow-hidden border border-muji-border shrink-0 cursor-pointer" onclick="viewPhoto('${item.image}')">
+                                    <div class="w-10 h-10 rounded-lg overflow-hidden border border-muji-border shrink-0 cursor-pointer" onclick="viewPhoto('${item.image}')">
                                         <img src="${item.image}" class="w-full h-full object-cover">
                                     </div>
                                 ` : `
-                                    <div class="w-9 h-9 bg-muji-light rounded-lg border border-muji-border/30 shrink-0 flex items-center justify-center text-[10px] text-muji-secondary">
-                                        <i class="fa-solid fa-receipt"></i>
+                                    <div class="w-10 h-10 bg-muji-light rounded-lg border border-muji-border/30 shrink-0 flex items-center justify-center text-xs text-muji-secondary">
+                                        <i class="${iconClass}"></i>
                                     </div>
                                 `}
-                                <div class="truncate">
-                                    <p class="font-bold text-muji-dark truncate">${item.name}</p>
-                                    <span class="text-[9px] text-muji-secondary font-mono">${new Date(item.id).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                                <div class="min-w-0 flex-grow space-y-1">
+                                    <p class="font-bold text-muji-dark flex items-center flex-wrap gap-1.5">
+                                        <!-- Keep category text-badge cleanly without repeated inline category icon -->
+                                        <span class="bg-muji-warm/30 text-muji-dark text-[10px] px-2 py-0.5 rounded-md font-bold">
+                                            ${item.category}
+                                        </span> 
+                                        <span class="break-words leading-snug">${item.name}</span>
+                                    </p>
+                                    <!-- Full explanation wraps nicely down on multiple lines, NO TRUNCATE -->
+                                    <p class="text-xs text-muji-secondary font-medium italic break-words whitespace-normal leading-relaxed">
+                                        明細：${item.details || '無'}
+                                    </p>
+                                    <div class="text-[10px] text-muji-secondary font-mono flex items-center flex-wrap gap-x-2 gap-y-0.5 mt-0.5">
+                                        <span>${new Date(item.id).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                                        <span>|</span>
+                                        <span>支付: ${item.method}</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex items-center space-x-2.5 shrink-0 pl-1">
+                            <div class="flex items-center space-x-2 shrink-0 pl-1 pt-0.5">
                                 <div class="text-right">
                                     <p class="font-bold text-muji-dark font-mono">¥${item.jpy.toLocaleString()}</p>
-                                    <p class="text-[9px] text-muji-secondary font-mono">NT$${item.twd.toLocaleString()}</p>
+                                    <p class="text-xs text-muji-secondary font-mono font-medium font-mono">NT$${item.twd.toLocaleString()}</p>
                                 </div>
                                 <button onclick="deleteLedgerItem(${item.id})" class="text-red-400 hover:text-red-600 active:scale-90 transition-all p-1">
                                     <i class="fa-regular fa-trash-can"></i>
@@ -1726,7 +2154,6 @@
                 container.appendChild(groupSection);
             });
 
-            // Update Overall Summary Header
             document.getElementById('ledger-total-jpy').innerText = `¥ ${totalJpyAll.toLocaleString()}`;
             document.getElementById('ledger-total-twd').innerText = `≈ NT$ ${totalTwdAll.toLocaleString()}`;
         }
@@ -1762,65 +2189,91 @@
             document.body.appendChild(overlay);
         }
 
-        // ================= CHECKLIST FUNCTIONS =================
+        // ================= CHECKLIST CATEGORIZED FUNCTIONS =================
         function renderChecklist() {
             const container = document.getElementById('checklist-container');
             container.innerHTML = '';
 
+            let totalItems = 0;
             let checkedCount = 0;
-            checklist.forEach(item => {
-                if (item.checked) checkedCount++;
 
-                const row = document.createElement('label');
-                row.className = `flex items-start space-x-2.5 p-2 rounded-lg cursor-pointer transition-colors font-jp ${item.checked ? 'bg-muji-light/30 text-muji-secondary' : 'hover:bg-muji-light/50 text-muji-dark'}`;
+            Object.keys(checklist).forEach(category => {
+                const items = checklist[category] || [];
+                if (items.length === 0) return; // Skip empty categories if user deleted all of them
+
+                const catDiv = document.createElement('div');
+                catDiv.className = "space-y-2 bg-muji-warmlight p-3.5 rounded-2xl border border-muji-border/50 shadow-sm";
                 
-                row.innerHTML = `
-                    <input type="checkbox" onchange="toggleChecklistItem(${item.id})" ${item.checked ? 'checked' : ''} class="mt-0.5 rounded text-muji-primary focus:ring-muji-primary accent-muji-primary">
-                    <span class="flex-grow select-none leading-relaxed ${item.checked ? 'line-through opacity-60' : ''}">${item.text}</span>
-                    <button onclick="deleteChecklistItem(event, ${item.id})" class="text-muji-secondary hover:text-red-500 active:scale-95 transition-all pl-2">
-                        <i class="fa-regular fa-circle-xmark"></i>
-                    </button>
+                let catHeaderHtml = `
+                    <div class="text-xs font-bold text-muji-dark border-b border-muji-border/40 pb-1.5 flex items-center justify-between font-jp">
+                        <span class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-muji-accent mr-2"></span>${category}</span>
+                        <span class="text-[9px] text-muji-secondary font-mono">${items.filter(i=>i.checked).length}/${items.length}</span>
+                    </div>
                 `;
-                container.appendChild(row);
+
+                let itemsHtml = '<div class="space-y-1 pt-1">';
+                items.forEach(item => {
+                    totalItems++;
+                    if (item.checked) checkedCount++;
+
+                    itemsHtml += `
+                        <label class="flex items-center space-x-2.5 py-1 px-1 rounded-lg cursor-pointer transition-colors active:bg-muji-light/30">
+                            <input type="checkbox" onchange="toggleChecklistItem('${category}', '${item.id}')" ${item.checked ? 'checked' : ''} class="mt-0.5 rounded text-muji-primary focus:ring-muji-primary accent-muji-primary shrink-0">
+                            <span class="flex-grow select-none leading-relaxed text-xs text-muji-dark break-all ${item.checked ? 'line-through opacity-60' : ''}">${item.text}</span>
+                            <button onclick="deleteChecklistItem(event, '${category}', '${item.id}')" class="text-muji-secondary hover:text-red-500 active:scale-90 transition-all pl-2 shrink-0">
+                                <i class="fa-regular fa-trash-can text-[10px]"></i>
+                            </button>
+                        </label>
+                    `;
+                });
+                itemsHtml += '</div>';
+
+                catDiv.innerHTML = catHeaderHtml + itemsHtml;
+                container.appendChild(catDiv);
             });
 
-            document.getElementById('checklist-progress').innerText = `${checkedCount} / ${checklist.length}`;
+            document.getElementById('checklist-progress').innerText = `${checkedCount} / ${totalItems}`;
         }
 
-        function toggleChecklistItem(id) {
-            checklist = checklist.map(item => {
+        function toggleChecklistItem(category, id) {
+            checklist[category] = checklist[category].map(item => {
                 if (item.id === id) {
                     return { ...item, checked: !item.checked };
                 }
                 return item;
             });
-            localStorage.setItem('okinawa_checklist', JSON.stringify(checklist));
+            localStorage.setItem('okinawa_checklist_v2', JSON.stringify(checklist));
             renderChecklist();
         }
 
-        // Add Checklist Item
         function addChecklistItem() {
+            const catSelect = document.getElementById('new-todo-category');
             const input = document.getElementById('new-todo-text');
             const text = input.value.trim();
+            const category = catSelect.value;
             if (!text) return;
 
             const newItem = {
-                id: Date.now(),
+                id: 'custom-' + Date.now(),
                 text: text,
                 checked: false
             };
 
-            checklist.push(newItem);
-            localStorage.setItem('okinawa_checklist', JSON.stringify(checklist));
+            if (!checklist[category]) {
+                checklist[category] = [];
+            }
+            checklist[category].push(newItem);
+            localStorage.setItem('okinawa_checklist_v2', JSON.stringify(checklist));
             input.value = '';
             renderChecklist();
-            showToast("已成功追加一項準備任務！");
+            showToast(`成功追加至「${category}」！`);
         }
 
-        function deleteChecklistItem(e, id) {
-            e.stopPropagation(); 
-            checklist = checklist.filter(item => item.id !== id);
-            localStorage.setItem('okinawa_checklist', JSON.stringify(checklist));
+        function deleteChecklistItem(e, category, id) {
+            e.preventDefault();
+            e.stopPropagation();
+            checklist[category] = checklist[category].filter(item => item.id !== id);
+            localStorage.setItem('okinawa_checklist_v2', JSON.stringify(checklist));
             renderChecklist();
         }
 
